@@ -1,0 +1,1732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>My Vision Board | Achieve Your Dreams</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --deep-navy: #0A1A2F;
+            --rich-gold: #D4AF37;
+            --creamy-white: #FAFAFA;
+            --charcoal-gray: #2C3E50;
+            --emerald-green: #50C878;
+            --deep-burgundy: #dc3545;
+            --gold-hover: #FFD700;
+        }
+
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+        }
+                
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        * {
+            -webkit-tap-highlight-color: transparent;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        body {
+            background-color: var(--creamy-white);
+            color: var(--charcoal-gray);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: var(--deep-navy);
+            color: var(--rich-gold);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--rich-gold);
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--creamy-white);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            color: var(--creamy-white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 18px;
+        }
+        
+        nav ul li a:hover {
+            color: var(--gold-hover);
+        }
+
+        nav ul li a::after {
+            background-color: var(--gold-hover);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background-color: var(--rich-gold);
+            border: none;
+            color: var(--deep-navy);
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+            background: linear-gradient(to right, var(--deep-navy) 0%, #001a36 100%);
+        }
+        
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+        
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-image-upload {
+            margin-top: 20px;
+        }
+
+        #uploadHeroBtn {
+            color: var(--deep-navy);
+            background-color: var(--rich-gold);
+            border: 2px solid var(--creamy-white);
+            font-size: 14.5px;
+        }
+
+        #uploadHeroBtn:hover {
+            background-color: var(--gold-hover);
+            box-shadow: 0 10px 20px var(--gold-hover);
+        }
+        
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .hero-image img {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--rich-gold);
+            box-shadow: 0 10px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .hero-image img:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 15px var(--gold-hover);
+        }
+        
+        .hero-subtitle {
+            font-size: 18px;
+            color: var(--creamy-white);
+            margin-bottom: 15px;
+        }
+        
+        .hero-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--creamy-white);
+        }
+
+        .hero-title span {
+            color: var(--rich-gold);
+        }
+        
+        .hero-description {
+            font-size: 16px;
+            margin-bottom: 30px;
+            max-width: 600px;
+            color: var(--creamy-white);
+            font-family: 'Pacifico', cursive;
+        }
+
+        .hero-description span{
+            color: var(--rich-gold);
+             font-family: 'cursive';
+        }
+
+        .hero-subtitle span {
+            color: var(--rich-gold);
+        } 
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--rich-gold);
+            color: var(--deep-navy);
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            border: 2px solid var(--rich-gold);
+            cursor: pointer;
+            margin-right: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .btn:hover {
+            background-color: var(--gold-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px var(--gold-hover);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--rich-gold);
+            color: var(--rich-gold);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--rich-gold);
+            color: var(--deep-navy);
+            box-shadow: 0 10px 20px var(--gold-hover);
+        }
+
+        .btn-success {
+            background-color: var(--emerald-green);
+            border-color: var(--emerald-green);
+            color: white;
+        }
+
+        .btn-success:hover {
+            background-color: #3da766;
+            box-shadow: 0 10px 20px rgba(80, 200, 120, 0.5);
+        }
+
+        .btn-danger {
+            background-color: var(--deep-burgundy);
+            border-color: var(--deep-burgundy);
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background-color: #6a001b;
+            box-shadow: 0 10px 20px rgba(128, 0, 32, 0.5);
+        }
+
+        .btn, .category-btn, nav ul li a {
+            min-height: 48px;
+            min-width: 48px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Sections */
+        section {
+            padding: 100px 0;
+        }
+        
+        .section-title {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 50px;
+            color: var(--deep-navy);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50%;
+            height: 3px;
+            background-color: var(--rich-gold);
+        }
+        
+        /* Vision Board Section */
+        .vision-board {
+            background-color: var(--creamy-white);
+            padding: 50px 0;
+        }
+
+        .vision-board h2 {
+            color: var(--deep-navy);
+        }
+
+        .vision-categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .category-btn {
+            padding: 10px 20px;
+            background-color: var(--creamy-white);
+            border: 2px solid var(--deep-navy);
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+            color: var(--deep-navy);
+        }
+
+        .category-btn:hover, .category-btn.active {
+            background-color: var(--deep-navy);
+            color: var(--rich-gold);
+            box-shadow: 0 20px 25px rgba(10, 26, 47, 0.3);
+        }
+
+        .vision-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .vision-categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .category-btn {
+            padding: 8px 15px;
+            font-size: 14px;
+        }
+
+        .vision-card {
+            background-color: var(--creamy-white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            position: relative;
+            border: 1px solid var(--rich-gold);
+        }
+
+        .vision-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px var(--gold-hover);
+        }
+
+        .vision-card.completed {
+            opacity: 0.7;
+            position: relative;
+        }
+
+        .vision-card.completed::after {
+            content: 'ACHIEVED!';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-15deg);
+            background-color: var(--emerald-green);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 24px;
+            font-weight: bold;
+            z-index: 2;
+        }
+
+        .vision-image {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .vision-content {
+            padding: 20px;
+        }
+
+        .vision-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--deep-navy);
+        }
+
+        .vision-description {
+            margin-bottom: 15px;
+            font-size: 14px;
+            color: var(--charcoal-gray);
+        }
+
+        .vision-deadline {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            color: var(--deep-navy);
+            font-weight: 500;
+        }
+
+        .vision-deadline i {
+            margin-right: 10px;
+            color: var(--rich-gold);
+        }
+
+        .vision-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+
+        .vision-actions .btn {
+            margin: 0;
+            padding: 8px 15px;
+            font-size: 14px;
+        }
+
+        /* Add Vision Form */
+        .add-vision-form {
+            background-color: var(--creamy-white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid var(--rich-gold);
+        }
+
+        .add-vision-form:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px var(--gold-hover);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--deep-navy);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            background-color: var(--creamy-white);
+            border: 1px solid var(--rich-gold);
+            border-radius: 5px;
+            color: var(--deep-navy);
+            font-size: 16px;
+        }
+
+        .form-control:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px var(--gold-hover);
+        }
+
+        textarea.form-control {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 20px;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+        }
+
+        input, textarea, select {
+            font-size: 16px; /* Prevent iOS zooming */
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            overflow: auto;
+        }
+
+        .modal-content {
+            background-color: var(--creamy-white);
+            margin: 5% auto;
+            padding: 30px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+            position: relative;
+            border: 2px solid var(--rich-gold);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--deep-navy);
+            cursor: pointer;
+        }
+
+        .close-modal:hover {
+            color: var(--rich-gold);
+        }
+
+        /* Mind Map Styles */
+        .mind-map-container {
+            background-color: var(--creamy-white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            border: 1px solid var(--rich-gold);
+        }
+
+        .mind-map-controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+
+        .mind-map-options {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            margin-left: auto;
+        }
+
+        .mind-map-options label {
+            font-weight: 500;
+            color: var(--deep-navy);
+            font-size: 14px;
+        }
+
+        .mind-map-canvas {
+            width: 100%;
+            height: 600px;
+            border: 2px dashed var(--rich-gold);
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+            background-color: var(--creamy-white);
+        }
+
+        .mind-node {
+            position: absolute;
+            min-width: 120px;
+            min-height: 60px;
+            background-color: var(--rich-gold);
+            border-radius: 8px;
+            padding: 10px 15px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            cursor: move;
+            display: flex;
+            flex-direction: column;
+            z-index: 1;
+            color: var(--deep-navy);
+            font-weight: 500;
+            border: 2px solid var(--deep-navy);
+        }
+
+        .mind-node-content {
+            flex: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            word-break: break-word;
+        }
+
+        .mind-node-edit {
+            resize: none;
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: transparent;
+            outline: none;
+            font-family: inherit;
+            font-size: inherit;
+            font-weight: inherit;
+            color: inherit;
+        }
+
+        .mind-node-actions {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 5px;
+            gap: 5px;
+        }
+
+        .mind-node-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 12px;
+            padding: 2px 5px;
+            border-radius: 3px;
+            color: var(--deep-navy);
+        }
+
+        .mind-node-btn:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .mind-connection {
+            position: absolute;
+            background-color: var(--deep-navy);
+            height: 2px;
+            transform-origin: 0 0;
+            z-index: 0;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .mind-map-controls {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .mind-map-options {
+                margin-left: 0;
+                width: 100%;
+                justify-content: space-between;
+            }
+            
+            .mind-map-canvas {
+                height: 400px;
+            }
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--deep-navy);
+            color: var(--rich-gold);
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        .footer-text {
+            font-size: 14px;
+            color: var(--rich-gold);
+        }
+
+        footer p {
+            color: var(--creamy-white);
+        }
+
+        /* Responsive Styles */
+
+        .vision-grid {
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        /* Base styles (mobile-first) */
+
+        /* Small devices (landscape phones, 576px and up) */
+        @media (min-width: 576px) { 
+            .modal-content {
+                width: 95%;
+                margin: 10% auto;
+                padding: 15px;
+            }
+         }
+
+        /* Medium devices (tablets, 768px and up) */
+        @media (min-width: 768px) { 
+            .modal-content {
+                width: 95%;
+                margin: 10% auto;
+                padding: 15px;
+            }
+         }
+
+        /* Large devices (desktops, 992px and up) */
+        @media (min-width: 992px) { 
+            .modal-content {
+                width: 95%;
+                margin: 10% auto;
+                padding: 15px;
+            }
+        }
+
+        /* Extra large devices (large desktops, 1200px and up) */
+        @media (min-width: 1200px) { 
+            .modal-content {
+                width: 95%;
+                margin: 10% auto;
+                padding: 15px;
+            }
+         }
+
+        @media (max-width: 576px) {
+            .vision-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .modal-content {
+                width: 95%;
+                margin: 10% auto;
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                height: auto;
+                padding: 100px 0 50px;
+            }
+            
+            .hero-image img {
+                width: 250px;
+                height: 250px;
+            }
+            
+            .hero-title {
+                font-size: 28px;
+                line-height: 1.3;
+            }
+        }
+        @media (max-width: 992px) {
+            .hero-content {
+                flex-direction: column;
+            }
+            
+            .hero-image {
+                margin-top: 50px;
+            }
+
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: var(--deep-navy);
+                flex-direction: column;
+                padding: 20px 0;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav ul li {
+                margin: 0;
+                text-align: center;
+                padding: 10px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero-title {
+                font-size: 36px;
+            }
+            
+            .section-title {
+                font-size: 30px;
+            }
+
+            .modal-content {
+                width: 90%;
+                margin: 20% auto;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .vision-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .btn {
+                display: block;
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            .vision-actions {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .vision-actions .btn {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .hero-title {
+                font-size: 24px;
+            }
+            .category-btn {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">My<span>Vision</span></a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#vision-board">Vision Board</a></li>
+                    <li><a href="#add-vision">Add Vision</a></li>
+                    <li><a href="#mind-map">Vision Mind Map</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="hero-subtitle">Visualize Your Dreams,<span> Achieve Your Goals</span></p>
+                    <h1 class="hero-title">🔥 Keep pushing, keep striving — <span>your success story starts today!</span>🔥</h1>
+                    <p class="hero-description">
+                        "Dream big, work hard, and never stop believing—your passion is the fuel to turn the impossible into reality!"
+                        <span>"Charge forward with fire in your heart, hustle in your steps, and unstoppable energy—your dreams are waiting for you to claim them!"</span>
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#vision-board" class="btn">View Vision Board</a>
+                        <a href="#add-vision" class="btn btn-outline">Add New Vision</a>
+                    </div>
+                    <div class="hero-image-upload">
+                        <input type="file" id="heroImageUpload" accept="image/*" style="display: none;">
+                        <button class="btn" id="uploadHeroBtn">Upload Your Image</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://via.placeholder.com/350x350/002147/E5E4E2?text=Upload+Your+Image" 
+                        alt="Vision board placeholder - upload your image" 
+                        id="heroImage">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Board Section -->
+    <section class="vision-board" id="vision-board">
+        <div class="container">
+            <h2 class="section-title">My Vision Board</h2>
+            
+            <div class="vision-categories">
+                <button class="category-btn active" data-category="all">All</button>
+                <button class="category-btn" data-category="Role Models">Role Models</button>
+                <button class="category-btn" data-category="physical">Physical Goals</button>
+                <button class="category-btn" data-category="freedom">Financial Freedom</button>
+                <button class="category-btn" data-category="financial">Financial Goals</button>
+                <button class="category-btn" data-category="Career">Academic/Career Dreams</button>
+                <button class="category-btn" data-category="mental">Mental Goals</button>
+                <button class="category-btn" data-category="Daily habits">Daily habits</button>
+                <button class="category-btn" data-category="Social">Social Goals</button>
+                <button class="category-btn" data-category="Skill">Skill-building</button>
+                <button class="category-btn" data-category="Relationships">❤️ Love/Relationships</button>
+                <button class="category-btn" data-category="Adventure & Fun">Adventure & Fun</button>
+                <button class="category-btn" data-category="home">Dream Home</button>
+                <button class="category-btn" data-category="car">Dream Car</button>
+                <button class="category-btn" data-category="bike">Dream Bike</button>
+                <button class="category-btn" data-category="travel">Family Goals</button>
+                <button class="category-btn" data-category="travel">Dream Travel</button>
+                <button class="category-btn" data-category="other">Other</button>
+            </div>
+            
+            <div class="vision-grid" id="visionGrid">
+                <!-- Vision cards will be added here dynamically -->
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Add Vision Section -->
+    <section id="add-vision">
+        <div class="container">
+            <h2 class="section-title">Add New Vision</h2>
+            
+            <div class="add-vision-form">
+                <form id="visionForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="visionTitle">Vision Title</label>
+                            <input type="text" id="visionTitle" class="form-control" placeholder="e.g., Dream Home, Fitness Goal" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="visionCategory">Category</label>
+                            <select id="visionCategory" class="form-control" required>
+                                <option value="">Select a category</option>
+                                <option value="Role Models">Role Models</option>
+                                <option value="physical">Physical Goal</option>
+                                <option value="freedom">Financial Freedom</option>
+                                <option value="financial">Financial Goal</option>
+                                <option value="Career">Academic/Career Dreams</option>
+                                <option value="mental">Mental Goal</option>
+                                <option value="Daily habits">Daily habits</option>
+                                <option value="Social">Social Goals</option>
+                                <option value="skill">Skill-building</option>
+                                <option value="Relationships">Love/Relationships</option>
+                                <option value="Adventure & Fun">Adventure & Fun</option>
+                                <option value="home">Dream Home</option>
+                                <option value="bike">Dream Bike</option>
+                                <option value="car">Dream Car</option>
+                                <option value="family">Family Goals</option>
+                                <option value="travel">Dream Travel</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="visionDescription">Description</label>
+                        <textarea id="visionDescription" class="form-control" placeholder="Describe your vision in detail..." required></textarea>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="visionDeadline">Target Date</label>
+                            <input type="date" id="visionDeadline" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="visionImageChoice">Choose Image Type</label>
+                            <select id="visionImageChoice" class="form-control">
+                                <option value="upload">Upload Image</option>
+                                <option value="url">Image URL</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group" id="uploadGroup">
+                            <label for="visionImage">Upload Image</label>
+                            <input type="file" id="visionImage" class="form-control" accept="image/*">
+                        </div>
+
+                        <div class="form-group" id="urlGroup" style="display: none;">
+                            <label for="visionImageUrl">Paste Image URL</label>
+                            <input type="url" id="visionImageUrl" class="form-control" placeholder="https://example.com/image.jpg">
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn">Add to Vision Board</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mind Map Section -->
+    <section id="mind-map">
+        <div class="container">
+            <h2 class="section-title">Vision Mind Map</h2>
+            
+            <div class="mind-map-container">
+                <div class="mind-map-controls">
+                    <button class="btn" id="addNodeBtn">Add Node</button>
+                    <button class="btn" id="saveMindMapBtn">Save Mind Map</button>
+                    <button class="btn btn-danger" id="clearMindMapBtn">Clear All</button>
+                    <div class="mind-map-options">
+                        <label for="nodeColor">Node Color:</label>
+                        <input type="color" id="nodeColor" value="#D4AF37">
+                        <label for="nodeTextColor">Text Color:</label>
+                        <input type="color" id="nodeTextColor" value="#0A1A2F">
+                    </div>
+                </div>
+                
+                <div class="mind-map-canvas" id="mindMapCanvas">
+                    <!-- Mind map will be rendered here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Designed & Built with ❤️ by Deepak Raj</p>
+            <p class="footer-text">&copy; 2025 My Vision Board. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Image Preview Modal -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img id="modalImage" src="" alt="Vision Image" style="width: 100%;">
+        </div>
+    </div>
+
+    <script>
+        // In visionForm submit handler
+        const title = sanitizeInput(document.getElementById('visionTitle').value);
+        // ...
+        function sanitizeInput(str) {
+            return str.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        }
+
+        try {
+            localStorage.setItem('visionCards', JSON.stringify(cardsData));
+        } catch (e) {
+            console.error('Failed to save to localStorage', e);
+            alert('Failed to save data. Your browser storage might be full.');
+        }
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+        
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                if (this.getAttribute('href') === '#') return;
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    navMenu.classList.remove('show');
+                }
+            });
+        });
+
+        // Hero Image Upload Functionality
+        const heroImageUpload = document.getElementById('heroImageUpload');
+        const uploadHeroBtn = document.getElementById('uploadHeroBtn');
+        const heroImage = document.getElementById('heroImage');
+
+        // Trigger file input when button is clicked
+        uploadHeroBtn.addEventListener('click', () => {
+            heroImageUpload.click();
+        });
+
+        // Handle image selection
+        heroImageUpload.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                heroImage.src = e.target.result;
+                
+                // Store the image in localStorage for persistence
+                localStorage.setItem('heroImage', e.target.result);
+            };
+            reader.readAsDataURL(file);
+        });
+
+        // Category Filtering
+        const categoryBtns = document.querySelectorAll('.category-btn');
+        const visionCards = document.querySelectorAll('.vision-card');
+
+        // Replace the existing category filtering code with this:
+        categoryBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                categoryBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+                
+                const category = btn.dataset.category;
+                
+                // Get all vision cards (including dynamically added ones)
+                const allCards = document.querySelectorAll('.vision-card');
+                
+                allCards.forEach(card => {
+                    if (category === 'all' || card.dataset.category === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        const imageChoice = document.getElementById('visionImageChoice');
+        const uploadGroup = document.getElementById('uploadGroup');
+        const urlGroup = document.getElementById('urlGroup');
+
+        imageChoice.addEventListener('change', function () {
+            if (this.value === 'upload') {
+                uploadGroup.style.display = 'block';
+                urlGroup.style.display = 'none';
+            } else {
+                uploadGroup.style.display = 'none';
+                urlGroup.style.display = 'block';
+            }
+        });
+
+
+        // Image Preview Modal
+        const imageModal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const closeModal = document.querySelector('.close-modal');
+
+        // Add click event to all vision images
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('vision-image')) {
+                imageModal.style.display = 'block';
+                modalImg.src = e.target.src;
+            }
+        });
+
+        // Close modal when X is clicked
+        closeModal.addEventListener('click', function() {
+            imageModal.style.display = 'none';
+        });
+
+        // Close modal when clicking outside the image
+        window.addEventListener('click', function(e) {
+            if (e.target === imageModal) {
+                imageModal.style.display = 'none';
+            }
+        });
+
+        // Form Submission for New Vision
+        const visionForm = document.getElementById('visionForm');
+        const visionGrid = document.getElementById('visionGrid');
+
+        visionForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const title = document.getElementById('visionTitle').value;
+            const category = document.getElementById('visionCategory').value;
+            const description = document.getElementById('visionDescription').value;
+            const deadline = document.getElementById('visionDeadline').value;
+            const imageFile = document.getElementById('visionImage').files[0];
+            const imageChoiceValue = imageChoice.value;
+
+            if (imageChoiceValue === 'upload') {
+                if (!imageFile) {
+                    alert('Please select an image to upload');
+                    return;
+                }
+
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const imageUrl = e.target.result;
+                    createVisionCard(imageUrl);
+                };
+                reader.readAsDataURL(imageFile);
+            } else {
+                const url = document.getElementById('visionImageUrl').value.trim();
+                if (!url) {
+                    alert('Please enter an image URL');
+                    return;
+                }
+                createVisionCard(url);
+            }
+
+            function createVisionCard(imageUrl) {
+                const formattedDate = new Date(deadline).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'short'
+                });
+
+                const newCard = document.createElement('div');
+                newCard.className = 'vision-card';
+                newCard.dataset.category = category;
+
+                newCard.innerHTML = `
+                    <img src="${imageUrl}" alt="${title}" class="vision-image">
+                    <div class="vision-content">
+                        <h3 class="vision-title">${title}</h3>
+                        <p class="vision-description">${description}</p>
+                        <div class="vision-deadline">
+                            <i class="far fa-calendar-alt"></i> Target Date: ${formattedDate}
+                        </div>
+                        <div class="vision-actions">
+                            <button class="btn btn-success complete-btn">Mark Complete</button>
+                            <button class="btn btn-danger delete-btn">Delete</button>
+                        </div>
+                    </div>
+                `;
+
+                visionGrid.prepend(newCard);
+                visionForm.reset();
+                imageChoice.value = 'upload';
+                uploadGroup.style.display = 'block';
+                urlGroup.style.display = 'none';
+                addCardEventListeners(newCard);
+                saveAllVisionCards();
+            }
+
+            
+            if (!imageFile) {
+                alert('Please select an image for your vision');
+                return;
+            }
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const imageUrl = e.target.result;
+                
+                // Format the date for display
+                const formattedDate = new Date(deadline).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'short'
+                });
+                
+                // Create new vision card
+                const newCard = document.createElement('div');
+                newCard.className = 'vision-card';
+                newCard.dataset.category = category;
+                
+                newCard.innerHTML = `
+                    <img src="${imageUrl}" alt="${title}" class="vision-image">
+                    <div class="vision-content">
+                        <h3 class="vision-title">${title}</h3>
+                        <p class="vision-description">${description}</p>
+                        <div class="vision-deadline">
+                            <i class="far fa-calendar-alt"></i> Target Date: ${formattedDate}
+                        </div>
+                        <div class="vision-actions">
+                            <button class="btn btn-success complete-btn">Mark Complete</button>
+                            <button class="btn btn-danger delete-btn">Delete</button>
+                        </div>
+                    </div>
+                `;
+                
+                // Add to the grid
+                visionGrid.prepend(newCard);
+                
+                // Reset the form
+                visionForm.reset();
+                
+                // Add event listeners to the new card
+                addCardEventListeners(newCard);
+                
+                // Save all cards to localStorage
+                saveAllVisionCards();
+            };
+            
+            reader.readAsDataURL(imageFile);
+        });
+
+        // Function to save all vision cards to localStorage
+        function saveAllVisionCards() {
+            const cards = document.querySelectorAll('.vision-card');
+            const cardsData = [];
+            
+            cards.forEach(card => {
+                cardsData.push({
+                    title: card.querySelector('.vision-title').textContent,
+                    category: card.dataset.category,
+                    description: card.querySelector('.vision-description').textContent,
+                    deadline: card.querySelector('.vision-deadline').textContent.replace('Target Date: ', '').replace('Achieved: ', ''),
+                    imageSrc: card.querySelector('.vision-image').src,
+                    completed: card.classList.contains('completed')
+                });
+            });
+            
+            localStorage.setItem('visionCards', JSON.stringify(cardsData));
+        }
+
+        // Function to load vision cards from localStorage
+        function loadVisionCards() {
+            const savedCards = localStorage.getItem('visionCards');
+            if (!savedCards) return;
+            
+            const cardsData = JSON.parse(savedCards);
+            const visionGrid = document.getElementById('visionGrid');
+            
+            // First, remove all cards except the sample ones
+            document.querySelectorAll('.vision-card').forEach(card => {
+                if (!card.hasAttribute('data-sample')) {
+                    card.remove();
+                }
+            });
+            
+            // Then add the saved cards
+            cardsData.forEach(cardData => {
+                const newCard = document.createElement('div');
+                newCard.className = `vision-card ${cardData.completed ? 'completed' : ''}`;
+                newCard.dataset.category = cardData.category;
+                
+                newCard.innerHTML = `
+                    <img src="${cardData.imageSrc}" alt="${cardData.title}" class="vision-image">
+                    <div class="vision-content">
+                        <h3 class="vision-title">${cardData.title}</h3>
+                        <p class="vision-description">${cardData.description}</p>
+                        <div class="vision-deadline">
+                            <i class="far fa-calendar-alt"></i> ${cardData.completed ? 'Achieved' : 'Target Date'}: ${cardData.deadline}
+                        </div>
+                        <div class="vision-actions">
+                            <button class="btn ${cardData.completed ? 'btn-success' : 'btn-success complete-btn'}" ${cardData.completed ? 'disabled' : ''}>
+                                ${cardData.completed ? 'Completed' : 'Mark Complete'}
+                            </button>
+                            <button class="btn btn-danger delete-btn">Delete</button>
+                        </div>
+                    </div>
+                `;
+                
+                visionGrid.appendChild(newCard);
+                addCardEventListeners(newCard);
+            });
+        }
+
+        // Function to add event listeners to a card
+        function addCardEventListeners(card) {
+            // Image click for modal
+            card.querySelector('.vision-image').addEventListener('click', function() {
+                imageModal.style.display = 'block';
+                modalImg.src = this.src;
+            });
+            
+            // Complete button
+            const completeBtn = card.querySelector('.complete-btn');
+            if (completeBtn) {
+                completeBtn.addEventListener('click', function() {
+                    card.classList.add('completed');
+                    this.textContent = 'Completed';
+                    this.disabled = true;
+                    
+                    const deadlineElement = card.querySelector('.vision-deadline');
+                    deadlineElement.innerHTML = `
+                        <i class="far fa-calendar-alt"></i> Achieved: ${new Date().toLocaleDateString('en-US', {
+                            year: 'numeric',
+                            month: 'short',
+                            day: 'numeric'
+                        })}
+                    `;
+                    
+                    saveAllVisionCards();
+                });
+            }
+            
+            // Delete button
+            card.querySelector('.delete-btn').addEventListener('click', function() {
+                if (confirm('Are you sure you want to delete this vision?')) {
+                    card.remove();
+                    saveAllVisionCards();
+                }
+            });
+        }
+
+        // Initialize on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            // Load saved hero image
+            const savedImage = localStorage.getItem('heroImage');
+            if (savedImage) {
+                heroImage.src = savedImage;
+            }
+            
+            // Load saved vision cards
+            loadVisionCards();
+            
+            // Add event listeners to sample cards (marked with data-sample attribute)
+            document.querySelectorAll('.vision-card[data-sample]').forEach(card => {
+                addCardEventListeners(card);
+            });
+            
+            // Add scroll reveal effect
+            window.addEventListener('scroll', reveal);
+            
+            function reveal() {
+                const reveals = document.querySelectorAll('.vision-card');
+                
+                for (let i = 0; i < reveals.length; i++) {
+                    const windowHeight = window.innerHeight;
+                    const revealTop = reveals[i].getBoundingClientRect().top;
+                    const revealPoint = 150;
+                    
+                    if (revealTop < windowHeight - revealPoint) {
+                        reveals[i].classList.add('active');
+                    }
+                }
+            }
+            
+            // Initial reveal check
+            reveal();
+        });
+
+        // Mind Map Functionality
+        const mindMapCanvas = document.getElementById('mindMapCanvas');
+        const addNodeBtn = document.getElementById('addNodeBtn');
+        const saveMindMapBtn = document.getElementById('saveMindMapBtn');
+        const clearMindMapBtn = document.getElementById('clearMindMapBtn');
+        const nodeColorInput = document.getElementById('nodeColor');
+        const nodeTextColorInput = document.getElementById('nodeTextColor');
+
+        let nodes = [];
+        let connections = [];
+        let selectedNode = null;
+        let isDragging = false;
+        let dragOffsetX = 0;
+        let dragOffsetY = 0;
+        let isCreatingConnection = false;
+        let connectionStartNode = null;
+
+        // Load saved mind map
+        function loadMindMap() {
+            const savedMindMap = localStorage.getItem('mindMap');
+            if (savedMindMap) {
+                const data = JSON.parse(savedMindMap);
+                nodes = data.nodes || [];
+                connections = data.connections || [];
+                renderMindMap();
+            }
+        }
+
+        // Save mind map to localStorage
+        function saveMindMap() {
+            const mindMapData = {
+                nodes: nodes.map(node => ({
+                    id: node.id,
+                    x: node.x,
+                    y: node.y,
+                    width: node.width,
+                    height: node.height,
+                    content: node.content,
+                    color: node.color,
+                    textColor: node.textColor
+                })),
+                connections: connections
+            };
+            localStorage.setItem('mindMap', JSON.stringify(mindMapData));
+            alert('Mind map saved successfully!');
+        }
+
+        // Clear the entire mind map
+        function clearMindMap() {
+            if (confirm('Are you sure you want to clear the entire mind map? This cannot be undone.')) {
+                nodes = [];
+                connections = [];
+                mindMapCanvas.innerHTML = '';
+                localStorage.removeItem('mindMap');
+            }
+        }
+
+        // Render the mind map
+        function renderMindMap() {
+            // Clear the canvas
+            mindMapCanvas.innerHTML = '';
+            
+            // Render connections first (so they appear behind nodes)
+            connections.forEach(conn => {
+                const fromNode = nodes.find(n => n.id === conn.from);
+                const toNode = nodes.find(n => n.id === conn.to);
+                
+                if (fromNode && toNode) {
+                    const line = document.createElement('div');
+                    line.className = 'mind-connection';
+                    
+                    // Calculate line position and length
+                    const fromX = fromNode.x + fromNode.width / 2;
+                    const fromY = fromNode.y + fromNode.height / 2;
+                    const toX = toNode.x + toNode.width / 2;
+                    const toY = toNode.y + toNode.height / 2;
+                    
+                    const length = Math.sqrt(Math.pow(toX - fromX, 2) + Math.pow(toY - fromY, 2));
+                    const angle = Math.atan2(toY - fromY, toX - fromX) * 180 / Math.PI;
+                    
+                    line.style.width = `${length}px`;
+                    line.style.left = `${fromX}px`;
+                    line.style.top = `${fromY}px`;
+                    line.style.transform = `rotate(${angle}deg)`;
+                    
+                    mindMapCanvas.appendChild(line);
+                }
+            });
+            
+            // Render nodes
+            nodes.forEach(node => {
+                const nodeElement = document.createElement('div');
+                nodeElement.className = 'mind-node';
+                nodeElement.id = `node-${node.id}`;
+                nodeElement.style.left = `${node.x}px`;
+                nodeElement.style.top = `${node.y}px`;
+                nodeElement.style.width = `${node.width}px`;
+                nodeElement.style.height = `${node.height}px`;
+                nodeElement.style.backgroundColor = node.color;
+                nodeElement.style.color = node.textColor;
+                nodeElement.style.borderColor = node.textColor;
+                
+                nodeElement.innerHTML = `
+                    <div class="mind-node-content">${node.content}</div>
+                    <div class="mind-node-actions">
+                        <button class="mind-node-btn edit-btn" title="Edit">✏️</button>
+                        <button class="mind-node-btn connect-btn" title="Connect">🔗</button>
+                        <button class="mind-node-btn delete-btn" title="Delete">🗑️</button>
+                    </div>
+                `;
+                
+                mindMapCanvas.appendChild(nodeElement);
+                
+                // Add event listeners
+                const contentDiv = nodeElement.querySelector('.mind-node-content');
+                const editBtn = nodeElement.querySelector('.edit-btn');
+                const connectBtn = nodeElement.querySelector('.connect-btn');
+                const deleteBtn = nodeElement.querySelector('.delete-btn');
+                
+                // Double click to edit
+                contentDiv.addEventListener('dblclick', () => {
+                    editNode(node.id);
+                });
+                
+                // Edit button
+                editBtn.addEventListener('click', () => {
+                    editNode(node.id);
+                });
+                
+                // Connect button
+                connectBtn.addEventListener('click', () => {
+                    // In the connectBtn click handler
+                    if (isCreatingConnection) {
+                        nodeElement.style.boxShadow = '0 0 0 3px var(--emerald-green)';
+                    }
+
+                    if (isCreatingConnection && connectionStartNode !== node.id) {
+                        // Complete the connection
+                        connections.push({
+                            from: connectionStartNode,
+                            to: node.id
+                        });
+                        isCreatingConnection = false;
+                        connectionStartNode = null;
+                        renderMindMap();
+                    } else {
+                        // Start a new connection
+                        isCreatingConnection = true;
+                        connectionStartNode = node.id;
+                        alert(`Click on another node to connect to "${node.content}"`);
+                    }
+                });
+                
+                // Delete button
+                deleteBtn.addEventListener('click', () => {
+                    deleteNode(node.id);
+                });
+                
+                // Drag functionality
+                nodeElement.addEventListener('mousedown', (e) => {
+                    if (e.target === contentDiv || e.target === nodeElement) {
+                        isDragging = true;
+                        selectedNode = node.id;
+                        dragOffsetX = e.clientX - node.x;
+                        dragOffsetY = e.clientY - node.y;
+                        nodeElement.style.zIndex = 1000;
+                        e.preventDefault();
+                    }
+                });
+            });
+        }
+
+        // Add a new node
+        function addNode() {
+            const newNode = {
+                id: Date.now().toString(),
+                x: 50,
+                y: 50,
+                width: 150,
+                height: 80,
+                content: 'New Idea',
+                color: nodeColorInput.value,
+                textColor: nodeTextColorInput.value
+            };
+            
+            nodes.push(newNode);
+            renderMindMap();
+            editNode(newNode.id);
+        }
+
+        // Edit a node
+        function editNode(nodeId) {
+            const node = nodes.find(n => n.id === nodeId);
+            if (!node) return;
+            
+            const nodeElement = document.getElementById(`node-${nodeId}`);
+            if (!nodeElement) return;
+            
+            const contentDiv = nodeElement.querySelector('.mind-node-content');
+            const originalContent = contentDiv.textContent;
+            
+            const textarea = document.createElement('textarea');
+            textarea.className = 'mind-node-edit';
+            textarea.value = originalContent;
+            textarea.style.backgroundColor = node.color;
+            textarea.style.color = node.textColor;
+            
+            contentDiv.replaceWith(textarea);
+            textarea.focus();
+            
+            function saveEdit() {
+                node.content = textarea.value.trim() || 'Empty Node';
+                renderMindMap();
+            }
+            
+            textarea.addEventListener('blur', saveEdit);
+            textarea.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                    e.preventDefault();
+                    saveEdit();
+                }
+            });
+        }
+
+        // Delete a node
+        function deleteNode(nodeId) {
+            if (confirm('Delete this node and all its connections?')) {
+                // Remove the node
+                nodes = nodes.filter(n => n.id !== nodeId);
+                
+                // Remove any connections involving this node
+                connections = connections.filter(conn => 
+                    conn.from !== nodeId && conn.to !== nodeId
+                );
+                
+                renderMindMap();
+                saveMindMap();
+            }
+        }
+
+        // Event listeners for mind map
+        addNodeBtn.addEventListener('click', addNode);
+        saveMindMapBtn.addEventListener('click', saveMindMap);
+        clearMindMapBtn.addEventListener('click', clearMindMap);
+
+        // Handle mouse events for dragging
+        document.addEventListener('mousemove', (e) => {
+            if (isDragging && selectedNode) {
+                const node = nodes.find(n => n.id === selectedNode);
+                if (node) {
+                    node.x = e.clientX - dragOffsetX;
+                    node.y = e.clientY - dragOffsetY;
+                    
+                    // Keep within canvas bounds
+                    const canvasRect = mindMapCanvas.getBoundingClientRect();
+                    node.x = Math.max(0, Math.min(node.x, canvasRect.width - node.width));
+                    node.y = Math.max(0, Math.min(node.y, canvasRect.height - node.height));
+                    
+                    renderMindMap();
+                }
+            }
+        });
+
+        document.addEventListener('mouseup', () => {
+            if (isDragging) {
+                isDragging = false;
+                if (selectedNode) {
+                    const nodeElement = document.getElementById(`node-${selectedNode}`);
+                    if (nodeElement) {
+                        nodeElement.style.zIndex = 1;
+                    }
+                    selectedNode = null;
+                    saveMindMap();
+                }
+            }
+        });
+
+        // Handle clicks on canvas (to cancel connection creation)
+        mindMapCanvas.addEventListener('click', (e) => {
+            if (e.target === mindMapCanvas && isCreatingConnection) {
+                isCreatingConnection = false;
+                connectionStartNode = null;
+                alert('Connection canceled');
+            }
+        });
+
+        // Initialize mind map on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            loadMindMap();
+        });
+    </script>
+</body>
+</html>
